@@ -93,7 +93,7 @@ class FTPHandler(socketserver.BaseRequestHandler):
             _password = config[username]["Password"]
             if _password == password:  # 判断密码是否一致
                 print("pass auth..", username)
-                config[username]["Username"] = username  # 不理解有什么用**
+                config[username]["Username"] = username
                 return config[username]
 
     def send_response(self, status_code, data=None):
